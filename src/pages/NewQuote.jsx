@@ -1,7 +1,13 @@
+import QuoteForm from '../components/quotes/QuoteForm'
+
 const NewQuote = () => {
+	const addQuoteHandler = ({ author, text }) => {
+		console.log(author, text)
+	}
+
 	return (
 		<div>
-			<h1>NewQuote</h1>
+			<QuoteForm onAddQuote={addQuoteHandler} />
 		</div>
 	)
 }

@@ -1,7 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import NewQuote from './pages/NewQuote'
-import Quotes from './pages/Quotes'
+import Quotes from './pages/AllQuotes'
 import QuotesDetail from './pages/QuotesDetail'
 
 function App() {
