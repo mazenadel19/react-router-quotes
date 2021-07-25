@@ -13,7 +13,6 @@ const QuotesDetail = () => {
 	]
 
 	const param = useParams()
-	console.log(param)
 
 	const quote = DUMMY_QUOTES.find(q => q.id === param.quoteId)
 
