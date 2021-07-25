@@ -21,8 +21,9 @@ const QuotesDetail = () => {
 		return (
 			<HighlightedQuote
 				text={
-					'No Quote Found!'
+					'Better to remain silent and be thought a fool than to speak out and remove all doubt.'
 				}
+				author={'Abraham Lincoln'}
 			/>
 		)
 	}
