@@ -13,8 +13,10 @@ const QuotesDetail = () => {
 	]
 
 	const param = useParams()
+
 	const match = useRouteMatch()
-	console.log(match)
+
+
 	const quote = DUMMY_QUOTES.find(q => q.id === param.quoteId)
 
 	if (!quote) {
