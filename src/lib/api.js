@@ -1,6 +1,7 @@
 const FIREBASE_DOMAIN =
 	'https://react-quotes-app-86553-default-rtdb.firebaseio.com'
 
+//GET all quotes
 export async function getAllQuotes() {
 	const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`)
 	const data = await response.json()
@@ -23,6 +24,7 @@ export async function getAllQuotes() {
 	return transformedQuotes
 }
 
+//GET 1 quote
 export async function getSingleQuote(quoteId) {
 	const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`)
 	const data = await response.json()
@@ -39,6 +41,7 @@ export async function getSingleQuote(quoteId) {
 	return loadedQuote
 }
 
+//POST quote
 export async function addQuote(quoteData) {
 	const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`, {
 		method: 'POST',
@@ -56,6 +59,7 @@ export async function addQuote(quoteData) {
 	return null
 }
 
+//POST comment
 export async function addComment(requestData) {
 	const response = await fetch(
 		`${FIREBASE_DOMAIN}/comments/${requestData.quoteId}.json`,
@@ -76,6 +80,7 @@ export async function addComment(requestData) {
 	return { commentId: data.name }
 }
 
+//GET all comment
 export async function getAllComments(quoteId) {
 	const response = await fetch(`${FIREBASE_DOMAIN}/comments/${quoteId}.json`)
 
