@@ -1,13 +1,18 @@
 import React, { Suspense } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import Layout from './components/layout/Layout'
+import LoadingSpinner from './components/UI/LoadingSpinner'
 
 const NewQuote = React.lazy(() => import('./pages/NewQuote'))
 const QuotesDetail = React.lazy(() => import('./pages/QuotesDetail'))
 const NotFound = React.lazy(() => import('./pages/NotFound'))
 const Quotes = React.lazy(() => import('./pages/AllQuotes'))
 
-const loading = <p>L0AD!NG...</p>
+const loading = (
+	<div className='centered'>
+		<LoadingSpinner />
+	</div>
+)
 
 function App() {
 	return (
